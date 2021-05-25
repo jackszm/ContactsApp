@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="elevation_normal">4dp</dimen>
+    <dimen name="spacing_xnormal">24dp</dimen>
+
+</resources>

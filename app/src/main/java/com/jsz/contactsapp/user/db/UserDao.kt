@@ -12,11 +12,8 @@ interface UserDao {
     @Query("SELECT * FROM user")
     fun getAll(): Observable<List<DbUser>>
 
-//    @Query("SELECT * FROM user WHERE id IN (:userIds)")
-//    fun loadAllByIds(userIds: IntArray): List<DbUser>
-//
-//    @Query("SELECT * FROM user WHERE fullName LIKE :fullName LIMIT 1")
-//    fun findByName(fullName: String): DbUser
+    @Query("SELECT * FROM user WHERE userId LIKE :userId LIMIT 1")
+    fun findById(userId: String): DbUser?
 
     @Insert
     fun insertAll(users: List<DbUser>)

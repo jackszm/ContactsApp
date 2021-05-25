@@ -5,7 +5,7 @@ import com.jsz.contactsapp.user.db.UserDao
 import com.jsz.contactsapp.user.domain.User
 import io.reactivex.Completable
 import io.reactivex.Observable
-import io.reactivex.schedulers.Schedulers
+import io.reactivex.Single
 
 class UserRepository(
     private val usersApi: UsersApiService,
@@ -17,9 +17,13 @@ class UserRepository(
             .map { it.toUsers() }
     }
 
+    fun requireUserById(userId: String): Single<User> {
+        return Single.fromCallable { usersDao.findById(userId)!! }
+            .map { it.toUser() }
+    }
+
     fun fetchUsers(): Completable {
         return usersApi.getUsers(1, "SEED", 100, "us,dk,fr,gb")
-            .subscribeOn(Schedulers.io())
             .map { it.toDbUsers() }
             .doOnSuccess { usersDao.replace(it) }
             .ignoreElement()

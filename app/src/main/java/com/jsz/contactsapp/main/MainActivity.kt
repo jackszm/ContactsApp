@@ -27,6 +27,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        setSupportActionBar(binding.toolbar)
         binding.usersRecyclerView.adapter = adapter
 
         observeState()
@@ -58,7 +59,7 @@ class MainActivity : AppCompatActivity() {
     private fun observeNavigationEvents() {
         viewModel.navigationEvents.observe(this) {
             when (it) {
-                is OnUserClicked -> navigator.toUserDetails(it.name, it.imageUrl)
+                is OnUserClicked -> navigator.toUserDetails(it.userId)
             }.exhaustive
         }
     }

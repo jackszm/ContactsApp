@@ -14,6 +14,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.rxkotlin.Observables
 import io.reactivex.rxkotlin.plusAssign
 import io.reactivex.rxkotlin.subscribeBy
+import io.reactivex.schedulers.Schedulers
 
 class MainViewModel(
     private val userRepository: UserRepository,
@@ -24,6 +25,7 @@ class MainViewModel(
             getUsersWithHeaders(),
             refreshUsers()
         ) { items, refreshing -> toUiModel(items, refreshing) }
+            .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribeBy(
                 onNext = { setState { it } },
@@ -57,7 +59,7 @@ class MainViewModel(
     }
 
     private fun onUserClicked(user: User) {
-        sendNavigationEvent(NavigationEvent.OnUserClicked(user.fullName, user.imageUrl))
+        sendNavigationEvent(NavigationEvent.OnUserClicked(user.userId))
     }
 
     sealed class State {
@@ -72,7 +74,7 @@ class MainViewModel(
     }
 
     sealed class NavigationEvent {
-        data class OnUserClicked(val name: String, val imageUrl: String) : NavigationEvent()
+        data class OnUserClicked(val userId: String) : NavigationEvent()
     }
 }
 

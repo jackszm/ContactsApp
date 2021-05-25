@@ -55,7 +55,8 @@ val apiModule = module {
 //    }
 
     fun provideLoggingInterceptor() = HttpLoggingInterceptor().apply {
-        setLevel(HttpLoggingInterceptor.Level.BODY)
+        setLevel(HttpLoggingInterceptor.Level.NONE)
+//        setLevel(HttpLoggingInterceptor.Level.BODY)
     }
 
     fun provideMoshi() = Moshi.Builder()

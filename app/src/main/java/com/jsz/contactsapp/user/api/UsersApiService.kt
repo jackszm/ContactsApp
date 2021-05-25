@@ -1,6 +1,5 @@
 package com.jsz.contactsapp.user.api
 
-import com.jsz.contactsapp.api.data.ApiUsersResponse
 import io.reactivex.Single
 import retrofit2.http.GET
 import retrofit2.http.Query

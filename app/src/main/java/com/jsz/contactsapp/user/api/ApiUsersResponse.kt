@@ -1,4 +1,4 @@
-package com.jsz.contactsapp.api.data
+package com.jsz.contactsapp.user.api
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -12,9 +12,10 @@ data class ApiUsersResponse(
 
 @JsonClass(generateAdapter = true)
 data class ApiUser(
+    @Json(name = "id") val id: ApiId,
     @Json(name = "name") val name: ApiUserName,
     @Json(name = "email") val email: String,
-    @Json(name = "picture") val picture: ApiUserPicture
+    @Json(name = "picture") val picture: ApiUserPicture,
 //    @Json(name = "gender") val gender: String,
 //    @Json(name = "location") val location: ApiLocation,
 //    @Json(name = "login") val login: ApiLogin,
@@ -22,8 +23,13 @@ data class ApiUser(
 //    @Json(name = "registered") val registered: ApiRegistered,
 //    @Json(name = "phone") val phone: String,
 //    @Json(name = "cell") val cell: String,
-//    @Json(name = "id") val id: ApiId
 //    @Json(name = "nat") val nat: String
+)
+
+@JsonClass(generateAdapter = true)
+data class ApiId(
+    @Json(name = "name") val name: String,
+    @Json(name = "value") val value: String
 )
 
 @JsonClass(generateAdapter = true)
@@ -81,11 +87,6 @@ data class ApiUserPicture(
 //    @Json(name = "age") val age: Int
 //)
 //
-//@JsonClass(generateAdapter = true)
-//data class ApiId(
-//    @Json(name = "name") val name: String,
-//    @Json(name = "value") val value: String
-//)
 //
 //@JsonClass(generateAdapter = true)
 //data class ApiCoordinates(
