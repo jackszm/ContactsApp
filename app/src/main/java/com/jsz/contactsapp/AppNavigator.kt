@@ -1,7 +1,7 @@
 package com.jsz.contactsapp
 
 import android.app.Activity
-import com.jsz.contactsapp.details.UserDetailsActivity
+import com.jsz.contactsapp.feature.details.UserDetailsActivity
 
 class AppNavigator(
     private val activity: Activity

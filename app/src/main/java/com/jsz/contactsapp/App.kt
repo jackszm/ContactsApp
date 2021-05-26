@@ -1,11 +1,11 @@
 package com.jsz.contactsapp
 
 import android.app.Application
-import com.jsz.contactsapp.api.apiModule
-import com.jsz.contactsapp.db.databaseModule
-import com.jsz.contactsapp.details.detailsModule
-import com.jsz.contactsapp.main.mainModule
-import com.jsz.contactsapp.user.userModule
+import com.jsz.contactsapp.common.api.apiModule
+import com.jsz.contactsapp.common.db.databaseModule
+import com.jsz.contactsapp.feature.details.detailsModule
+import com.jsz.contactsapp.feature.main.mainModule
+import com.jsz.contactsapp.data.user.userModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".main.MainActivity">
+    tools:context=".feature.main.MainActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBar"
@@ -36,7 +36,7 @@
 
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
-    <com.jsz.contactsapp.common.LoadingErrorView
+    <com.jsz.contactsapp.common.ui.LoadingErrorView
         android:id="@+id/loadingErrorView"
         android:layout_width="match_parent"
         android:layout_height="0dp"

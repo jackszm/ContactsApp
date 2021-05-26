@@ -16,7 +16,7 @@
         tools:ignore="AllowBackup">
 
         <activity
-            android:name=".main.MainActivity"
+            android:name="com.jsz.contactsapp.feature.main.MainActivity"
             android:exported="true">
 
             <intent-filter>
@@ -27,7 +27,7 @@
         </activity>
 
         <activity
-            android:name="com.jsz.contactsapp.details.UserDetailsActivity"
+            android:name="com.jsz.contactsapp.feature.details.UserDetailsActivity"
             android:theme="@style/AppTheme.Transparent" />
 
     </application>
