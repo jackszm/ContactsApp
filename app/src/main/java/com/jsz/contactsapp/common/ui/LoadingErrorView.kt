@@ -6,13 +6,13 @@ import android.view.LayoutInflater
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.jsz.contactsapp.common.utils.gone
 import com.jsz.contactsapp.common.utils.visible
-import com.jsz.contactsapp.databinding.MergeLoadingErrorBinding
+import com.jsz.contactsapp.databinding.LoadingErrorViewBinding
 
 class LoadingErrorView @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
 ) : ConstraintLayout(context, attrs, defStyleAttr) {
 
-    private val binding = MergeLoadingErrorBinding.inflate(LayoutInflater.from(context), this)
+    private val binding = LoadingErrorViewBinding.inflate(LayoutInflater.from(context), this)
 
     fun showLoading() {
         this.visible()

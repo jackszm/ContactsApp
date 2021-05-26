@@ -11,7 +11,7 @@ import coil.load
 import coil.transform.CircleCropTransformation
 import com.jsz.contactsapp.R
 import com.jsz.contactsapp.common.ui.BottomSheetFragment
-import com.jsz.contactsapp.databinding.ActivityUserDetailsBinding
+import com.jsz.contactsapp.databinding.UserDetailsActivityBinding
 import com.jsz.contactsapp.databinding.UserDetailsFragmentBinding
 import com.jsz.contactsapp.feature.details.UserDetailsViewModel.State.Data
 import com.jsz.contactsapp.feature.details.UserDetailsViewModel.State.Loading
@@ -21,7 +21,7 @@ import org.koin.core.parameter.parametersOf
 class UserDetailsActivity : AppCompatActivity() {
 
 
-    private lateinit var binding: ActivityUserDetailsBinding
+    private lateinit var binding: UserDetailsActivityBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

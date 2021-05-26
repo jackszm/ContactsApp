@@ -6,7 +6,7 @@ import com.jsz.contactsapp.AppNavigator
 import com.jsz.contactsapp.common.utils.exhaustive
 import com.jsz.contactsapp.common.utils.gone
 import com.jsz.contactsapp.common.utils.visible
-import com.jsz.contactsapp.databinding.ActivityMainBinding
+import com.jsz.contactsapp.databinding.MainActivityBinding
 import com.jsz.contactsapp.feature.main.MainViewModel.NavigationEvent.OnUserClicked
 import com.jsz.contactsapp.feature.main.MainViewModel.State
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -17,14 +17,14 @@ class MainActivity : AppCompatActivity() {
 
     private val navigator by lazy { AppNavigator(this) }
 
-    private lateinit var binding: ActivityMainBinding
+    private lateinit var binding: MainActivityBinding
 
     private val adapter = UsersAdapter()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = MainActivityBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         setSupportActionBar(binding.toolbar)

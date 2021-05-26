@@ -7,8 +7,8 @@ import coil.load
 import coil.transform.CircleCropTransformation
 import com.jsz.contactsapp.common.utils.HasIdItemCallback
 import com.jsz.contactsapp.common.utils.inflater
-import com.jsz.contactsapp.databinding.ItemLetterBinding
-import com.jsz.contactsapp.databinding.ItemUserBinding
+import com.jsz.contactsapp.databinding.UsersLetterHeaderItemBinding
+import com.jsz.contactsapp.databinding.UsersUserItemBinding
 import com.jsz.contactsapp.feature.main.UsersListItemUiModel.LetterHeader
 import com.jsz.contactsapp.feature.main.UsersListItemUiModel.UserItemUiModel
 
@@ -34,12 +34,12 @@ class UsersAdapter : ListAdapter<UsersListItemUiModel, RecyclerView.ViewHolder>(
 }
 
 class UserViewHolder(
-    private val binding: ItemUserBinding,
+    private val binding: UsersUserItemBinding,
 ) : RecyclerView.ViewHolder(binding.root) {
 
     companion object {
         fun create(parent: ViewGroup): UserViewHolder {
-            val binding = ItemUserBinding.inflate(parent.inflater(), parent, false)
+            val binding = UsersUserItemBinding.inflate(parent.inflater(), parent, false)
             return UserViewHolder(binding)
         }
     }
@@ -56,12 +56,12 @@ class UserViewHolder(
 }
 
 class LetterHeaderViewHolder(
-    private val binding: ItemLetterBinding,
+    private val binding: UsersLetterHeaderItemBinding,
 ) : RecyclerView.ViewHolder(binding.root) {
 
     companion object {
         fun create(parent: ViewGroup): LetterHeaderViewHolder {
-            val binding = ItemLetterBinding.inflate(parent.inflater(), parent, false)
+            val binding = UsersLetterHeaderItemBinding.inflate(parent.inflater(), parent, false)
             return LetterHeaderViewHolder(binding)
         }
     }
