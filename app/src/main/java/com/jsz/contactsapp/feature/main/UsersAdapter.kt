@@ -5,8 +5,8 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import coil.transform.CircleCropTransformation
-import com.jsz.contactsapp.common.utils.HasIdItemCallback
 import com.jsz.contactsapp.common.ext.inflater
+import com.jsz.contactsapp.common.utils.HasIdItemCallback
 import com.jsz.contactsapp.databinding.UsersLetterHeaderItemBinding
 import com.jsz.contactsapp.databinding.UsersUserItemBinding
 import com.jsz.contactsapp.feature.main.UsersListItemUiModel.LetterHeader

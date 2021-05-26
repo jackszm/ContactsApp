@@ -1,5 +1,10 @@
 package com.jsz.contactsapp.common.utils
 
+
+/**
+ * This class is used to pass functions in the UiModel and so we can still compare UiModel instances.
+ * When passing functions as params of the data classes, comparing them becomes much more difficult.
+ */
 class Action<in T>(
     private val action: (T) -> Unit
 ) {

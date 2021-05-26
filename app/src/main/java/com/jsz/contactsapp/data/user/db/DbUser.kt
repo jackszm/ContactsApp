@@ -10,5 +10,4 @@ data class DbUser(
     @ColumnInfo(name = "fullName") val fullName: String,
     @ColumnInfo(name = "email") val email: String,
     @ColumnInfo(name = "imageUrl") val imageUrl: String,
-) {
-}
+)

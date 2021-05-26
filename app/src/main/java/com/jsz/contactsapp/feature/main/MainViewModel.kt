@@ -4,12 +4,12 @@ import android.util.Log
 import com.jsz.contactsapp.common.utils.Action
 import com.jsz.contactsapp.common.utils.BaseViewModel
 import com.jsz.contactsapp.common.utils.HasId
+import com.jsz.contactsapp.data.user.UserRepository
+import com.jsz.contactsapp.data.user.domain.User
 import com.jsz.contactsapp.feature.main.MainViewModel.NavigationEvent
 import com.jsz.contactsapp.feature.main.MainViewModel.State
 import com.jsz.contactsapp.feature.main.UsersListItemUiModel.LetterHeader
 import com.jsz.contactsapp.feature.main.UsersListItemUiModel.UserItemUiModel
-import com.jsz.contactsapp.data.user.UserRepository
-import com.jsz.contactsapp.data.user.domain.User
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.rxkotlin.Observables
 import io.reactivex.rxkotlin.plusAssign
@@ -42,6 +42,12 @@ class MainViewModel(
         .map { listItems -> listItems.sortedBy { (it[0] as LetterHeader).letterLabel }.flatten() }
         .startWith(emptyList<UsersListItemUiModel>())
 
+    private fun Map<Char, List<User>>.toUiModelLists() = entries.map {
+        val header = LetterHeader(it.key.toString())
+        val users = it.value.map { user -> UserItemUiModel(user, Action { onUserClicked(user) }) }
+        listOf<UsersListItemUiModel>(header) + users
+    }
+
     private fun refreshUsers() = userRepository.fetchUsers()
         .toSingleDefault(false)
         .toObservable()
@@ -50,12 +56,6 @@ class MainViewModel(
     private fun toUiModel(items: List<UsersListItemUiModel>, refreshing: Boolean) = when {
         items.isEmpty() && refreshing -> State.Loading
         else -> State.Data(refreshing, items)
-    }
-
-    private fun Map<Char, List<User>>.toUiModelLists() = entries.map {
-        val header = LetterHeader(it.key.toString())
-        val users = it.value.map { user -> UserItemUiModel(user, Action { onUserClicked(user) }) }
-        listOf<UsersListItemUiModel>(header) + users
     }
 
     private fun onUserClicked(user: User) {

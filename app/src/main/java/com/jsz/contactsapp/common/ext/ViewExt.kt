@@ -22,9 +22,9 @@ fun View.adjustElevationAndAlphaBasedOnScroll(
     impactElevation: Boolean = false,
     impactAlpha: Boolean = false,
 ) {
-    val maxElevation = resources.getDimension(R.dimen.elevation_normal)
+    val maxElevation = resources.getDimension(R.dimen.scrolling_effects_elevation)
+    val targetDistance = resources.getDimension(R.dimen.scrolling_effects_spacing)
     nestedScrollView.setOnScrollChangeListener(NestedScrollView.OnScrollChangeListener { _, _, scrollY, _, _ ->
-        val targetDistance = resources.getDimension(R.dimen.spacing_xnormal)
 
         if (impactAlpha) {
             val alpha = (scrollY.toFloat().coerceAtMost(targetDistance) / targetDistance) * 255F
@@ -32,10 +32,8 @@ fun View.adjustElevationAndAlphaBasedOnScroll(
         }
 
         if (impactElevation) {
-            ViewCompat.setElevation(
-                this,
-                ((scrollY - targetDistance).coerceAtLeast(0F) / 4F).coerceAtMost(maxElevation)
-            )
+            val elevation = ((scrollY - targetDistance).coerceAtLeast(0F) / 4F).coerceAtMost(maxElevation)
+            ViewCompat.setElevation(this, elevation)
         }
     })
 }
