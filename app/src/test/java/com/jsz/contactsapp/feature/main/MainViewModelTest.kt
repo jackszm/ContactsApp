@@ -1,13 +1,13 @@
 package com.jsz.contactsapp.feature.main
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
-import com.jsz.contactsapp.common.utils.NoOp
 import com.jsz.contactsapp.data.user.UserRepository
 import com.jsz.contactsapp.data.user.domain.User
 import com.jsz.contactsapp.feature.main.MainViewModel.NavigationEvent
 import com.jsz.contactsapp.feature.main.MainViewModel.State
 import com.jsz.contactsapp.feature.main.UsersListItemUiModel.UserItemUiModel
 import com.jsz.contactsapp.utils.RecordingViewModelObserver
+import com.jsz.contactsapp.utils.anyAction
 import com.jsz.popeat.main.utils.RxSchedulerRule
 import com.nhaarman.mockitokotlin2.doReturn
 import com.nhaarman.mockitokotlin2.mock
@@ -121,17 +121,17 @@ private val NEW_USERS = listOf(
 
 private val UI_USERS = listOf(
     UsersListItemUiModel.LetterHeader("S"),
-    UserItemUiModel(User("user-id-123", "Spider Man", "spider.man@gmail.com", "www.image.com/1.jpg"), NoOp),
+    UserItemUiModel(User("user-id-123", "Spider Man", "spider.man@gmail.com", "www.image.com/1.jpg"), anyAction),
     UsersListItemUiModel.LetterHeader("W"),
-    UserItemUiModel(User("user-id-222", "Wonder Woman", "wonder.woman@gmail.com", "www.image.com/2.jpg"), NoOp),
+    UserItemUiModel(User("user-id-222", "Wonder Woman", "wonder.woman@gmail.com", "www.image.com/2.jpg"), anyAction),
 )
 
 
 private val NEW_UI_USERS = listOf(
     UsersListItemUiModel.LetterHeader("I"),
-    UserItemUiModel(User("user-id-000", "Ironman", "ironman@gmail.com", "www.image.com/ironman.jpg"), NoOp),
+    UserItemUiModel(User("user-id-000", "Ironman", "ironman@gmail.com", "www.image.com/ironman.jpg"), anyAction),
     UsersListItemUiModel.LetterHeader("S"),
-    UserItemUiModel(User("user-id-123", "Spider Man", "spider.man@gmail.com", "www.image.com/1.jpg"), NoOp),
+    UserItemUiModel(User("user-id-123", "Spider Man", "spider.man@gmail.com", "www.image.com/1.jpg"), anyAction),
     UsersListItemUiModel.LetterHeader("W"),
-    UserItemUiModel(User("user-id-222", "Wonder Woman", "wonder.woman@gmail.com", "www.image.com/2.jpg"), NoOp),
+    UserItemUiModel(User("user-id-222", "Wonder Woman", "wonder.woman@gmail.com", "www.image.com/2.jpg"), anyAction),
 )
