@@ -1,4 +1,4 @@
-package com.jsz.contactsapp.common.utils
+package com.jsz.contactsapp.common.ext
 
 import android.graphics.Color
 import android.view.LayoutInflater

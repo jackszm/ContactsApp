@@ -4,8 +4,8 @@ import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import androidx.constraintlayout.widget.ConstraintLayout
-import com.jsz.contactsapp.common.utils.gone
-import com.jsz.contactsapp.common.utils.visible
+import com.jsz.contactsapp.common.ext.gone
+import com.jsz.contactsapp.common.ext.visible
 import com.jsz.contactsapp.databinding.LoadingErrorViewBinding
 
 class LoadingErrorView @JvmOverloads constructor(

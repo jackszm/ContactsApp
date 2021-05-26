@@ -3,9 +3,9 @@ package com.jsz.contactsapp.feature.main
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.jsz.contactsapp.AppNavigator
-import com.jsz.contactsapp.common.utils.exhaustive
-import com.jsz.contactsapp.common.utils.gone
-import com.jsz.contactsapp.common.utils.visible
+import com.jsz.contactsapp.common.ext.exhaustive
+import com.jsz.contactsapp.common.ext.gone
+import com.jsz.contactsapp.common.ext.visible
 import com.jsz.contactsapp.databinding.MainActivityBinding
 import com.jsz.contactsapp.feature.main.MainViewModel.NavigationEvent.OnUserClicked
 import com.jsz.contactsapp.feature.main.MainViewModel.State

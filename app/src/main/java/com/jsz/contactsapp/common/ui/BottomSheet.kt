@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.annotation.LayoutRes
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
-import com.jsz.contactsapp.common.utils.adjustElevationAndAlphaBasedOnScroll
+import com.jsz.contactsapp.common.ext.adjustElevationAndAlphaBasedOnScroll
 import com.jsz.contactsapp.common.utils.getScreenHeightRatio
 import com.jsz.contactsapp.databinding.BottomSheetFragmentBinding
 
