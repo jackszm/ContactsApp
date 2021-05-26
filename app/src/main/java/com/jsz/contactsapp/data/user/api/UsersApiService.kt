@@ -12,6 +12,5 @@ interface UsersApiService {
         @Query("seed") seed: String,
         @Query("results") results: Int,
         @Query("nat") nationalities: String
-
     ): Single<ApiUsersResponse>
 }
