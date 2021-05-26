@@ -7,6 +7,8 @@ import androidx.core.os.bundleOf
 import coil.load
 import coil.transform.CircleCropTransformation
 import com.jsz.contactsapp.R
+import com.jsz.contactsapp.common.ext.doNothing
+import com.jsz.contactsapp.common.ext.exhaustive
 import com.jsz.contactsapp.common.ui.BottomSheetFragment
 import com.jsz.contactsapp.databinding.UserDetailsFragmentBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -28,16 +30,19 @@ class UserDetailsFragment : BottomSheetFragment(R.layout.user_details_fragment) 
         viewModel.state.observe(this) {
             when (it) {
                 is UserDetailsViewModel.State.Data -> {
-                    binding.txtUserFullName.text = it.fullName
                     binding.imgUser.load(it.imageUrl) {
                         crossfade(true)
                         transformations(CircleCropTransformation())
                     }
+                    binding.txtUserFullName.text = it.fullName
                 }
                 UserDetailsViewModel.State.Loading -> {
-                    // TODO:
+                    doNothing() // TODO: Show loading spinner
                 }
-            }
+                UserDetailsViewModel.State.Error -> {
+                    doNothing() // TODO: Show error
+                }
+            }.exhaustive
         }
     }
 

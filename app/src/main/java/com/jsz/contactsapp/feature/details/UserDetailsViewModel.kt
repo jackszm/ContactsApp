@@ -17,13 +17,15 @@ class UserDetailsViewModel(
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribeBy(
-                onSuccess = { setState { State.Data(it.fullName, it.imageUrl) } }
+                onSuccess = { setState { State.Data(it.fullName, it.imageUrl) } },
+                onError = { setState { State.Error } }
             )
     }
 
     sealed class State {
 
         object Loading : State()
+        object Error : State()
 
         data class Data(
             val fullName: String,
