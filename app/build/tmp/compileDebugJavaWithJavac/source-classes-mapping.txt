@@ -1,0 +1,24 @@
+com/jsz/contactsapp/databinding/UsersLetterHeaderItemBinding.java
+ com.jsz.contactsapp.databinding.UsersLetterHeaderItemBinding
+com/jsz/contactsapp/databinding/UserDetailsActivityBinding.java
+ com.jsz.contactsapp.databinding.UserDetailsActivityBinding
+com/jsz/contactsapp/databinding/LoadingErrorViewBinding.java
+ com.jsz.contactsapp.databinding.LoadingErrorViewBinding
+com/jsz/contactsapp/databinding/MainActivityBinding.java
+ com.jsz.contactsapp.databinding.MainActivityBinding
+com/jsz/contactsapp/BuildConfig.java
+ com.jsz.contactsapp.BuildConfig
+com/jsz/contactsapp/databinding/UsersUserItemBinding.java
+ com.jsz.contactsapp.databinding.UsersUserItemBinding
+com/jsz/contactsapp/databinding/BottomSheetFragmentBinding.java
+ com.jsz.contactsapp.databinding.BottomSheetFragmentBinding
+com/jsz/contactsapp/databinding/UserDetailsFragmentBinding.java
+ com.jsz.contactsapp.databinding.UserDetailsFragmentBinding
+com/jsz/contactsapp/common/db/Database_Impl.java
+ com.jsz.contactsapp.common.db.Database_Impl
+ com.jsz.contactsapp.common.db.Database_Impl$1
+com/jsz/contactsapp/data/user/db/UserDao_Impl.java
+ com.jsz.contactsapp.data.user.db.UserDao_Impl
+ com.jsz.contactsapp.data.user.db.UserDao_Impl$1
+ com.jsz.contactsapp.data.user.db.UserDao_Impl$2
+ com.jsz.contactsapp.data.user.db.UserDao_Impl$3

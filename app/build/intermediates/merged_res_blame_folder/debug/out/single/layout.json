@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "/Users/jacek/workspace/jsz/ContactsApp/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/main_activity.xml",
+        "source": "/Users/jacek/workspace/jsz/ContactsApp/app/src/main/res/layout/main_activity.xml"
+    },
+    {
+        "merged": "/Users/jacek/workspace/jsz/ContactsApp/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/bottom_sheet_fragment.xml",
+        "source": "/Users/jacek/workspace/jsz/ContactsApp/app/src/main/res/layout/bottom_sheet_fragment.xml"
+    },
+    {
+        "merged": "/Users/jacek/workspace/jsz/ContactsApp/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/user_details_fragment.xml",
+        "source": "/Users/jacek/workspace/jsz/ContactsApp/app/src/main/res/layout/user_details_fragment.xml"
+    },
+    {
+        "merged": "/Users/jacek/workspace/jsz/ContactsApp/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/user_details_activity.xml",
+        "source": "/Users/jacek/workspace/jsz/ContactsApp/app/src/main/res/layout/user_details_activity.xml"
+    },
+    {
+        "merged": "/Users/jacek/workspace/jsz/ContactsApp/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/users_letter_header_item.xml",
+        "source": "/Users/jacek/workspace/jsz/ContactsApp/app/src/main/res/layout/users_letter_header_item.xml"
+    },
+    {
+        "merged": "/Users/jacek/workspace/jsz/ContactsApp/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/users_user_item.xml",
+        "source": "/Users/jacek/workspace/jsz/ContactsApp/app/src/main/res/layout/users_user_item.xml"
+    },
+    {
+        "merged": "/Users/jacek/workspace/jsz/ContactsApp/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/loading_error_view.xml",
+        "source": "/Users/jacek/workspace/jsz/ContactsApp/app/src/main/res/layout/loading_error_view.xml"
+    }
+]

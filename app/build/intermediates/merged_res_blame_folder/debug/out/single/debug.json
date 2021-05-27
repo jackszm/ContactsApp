@@ -1,0 +1,94 @@
+[
+    {
+        "merged": "/Users/jacek/workspace/jsz/ContactsApp/app/build/intermediates/res/merged/debug/drawable_bottomsheet_background.xml.flat",
+        "source": "/Users/jacek/workspace/jsz/ContactsApp/app/src/main/res/drawable/bottomsheet_background.xml"
+    },
+    {
+        "merged": "/Users/jacek/workspace/jsz/ContactsApp/app/build/intermediates/res/merged/debug/layout_user_details_activity.xml.flat",
+        "source": "/Users/jacek/workspace/jsz/ContactsApp/app/src/main/res/layout/user_details_activity.xml"
+    },
+    {
+        "merged": "/Users/jacek/workspace/jsz/ContactsApp/app/build/intermediates/res/merged/debug/layout_users_user_item.xml.flat",
+        "source": "/Users/jacek/workspace/jsz/ContactsApp/app/src/main/res/layout/users_user_item.xml"
+    },
+    {
+        "merged": "/Users/jacek/workspace/jsz/ContactsApp/app/build/intermediates/res/merged/debug/layout_loading_error_view.xml.flat",
+        "source": "/Users/jacek/workspace/jsz/ContactsApp/app/src/main/res/layout/loading_error_view.xml"
+    },
+    {
+        "merged": "/Users/jacek/workspace/jsz/ContactsApp/app/build/intermediates/res/merged/debug/drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "/Users/jacek/workspace/jsz/ContactsApp/app/build/generated/res/pngs/debug/drawable-anydpi-v24/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "/Users/jacek/workspace/jsz/ContactsApp/app/build/intermediates/res/merged/debug/layout_bottom_sheet_fragment.xml.flat",
+        "source": "/Users/jacek/workspace/jsz/ContactsApp/app/src/main/res/layout/bottom_sheet_fragment.xml"
+    },
+    {
+        "merged": "/Users/jacek/workspace/jsz/ContactsApp/app/build/intermediates/res/merged/debug/drawable_bottomsheet_handle.xml.flat",
+        "source": "/Users/jacek/workspace/jsz/ContactsApp/app/src/main/res/drawable/bottomsheet_handle.xml"
+    },
+    {
+        "merged": "/Users/jacek/workspace/jsz/ContactsApp/app/build/intermediates/res/merged/debug/layout_users_letter_header_item.xml.flat",
+        "source": "/Users/jacek/workspace/jsz/ContactsApp/app/src/main/res/layout/users_letter_header_item.xml"
+    },
+    {
+        "merged": "/Users/jacek/workspace/jsz/ContactsApp/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "/Users/jacek/workspace/jsz/ContactsApp/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/jacek/workspace/jsz/ContactsApp/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "/Users/jacek/workspace/jsz/ContactsApp/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/jacek/workspace/jsz/ContactsApp/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "/Users/jacek/workspace/jsz/ContactsApp/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/jacek/workspace/jsz/ContactsApp/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "/Users/jacek/workspace/jsz/ContactsApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "/Users/jacek/workspace/jsz/ContactsApp/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "/Users/jacek/workspace/jsz/ContactsApp/app/src/main/res/mipmap-hdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/jacek/workspace/jsz/ContactsApp/app/build/intermediates/res/merged/debug/layout_main_activity.xml.flat",
+        "source": "/Users/jacek/workspace/jsz/ContactsApp/app/src/main/res/layout/main_activity.xml"
+    },
+    {
+        "merged": "/Users/jacek/workspace/jsz/ContactsApp/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "/Users/jacek/workspace/jsz/ContactsApp/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/jacek/workspace/jsz/ContactsApp/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "/Users/jacek/workspace/jsz/ContactsApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "/Users/jacek/workspace/jsz/ContactsApp/app/build/intermediates/res/merged/debug/drawable_ic_launcher_background.xml.flat",
+        "source": "/Users/jacek/workspace/jsz/ContactsApp/app/src/main/res/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "/Users/jacek/workspace/jsz/ContactsApp/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "/Users/jacek/workspace/jsz/ContactsApp/app/src/main/res/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/jacek/workspace/jsz/ContactsApp/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "/Users/jacek/workspace/jsz/ContactsApp/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/jacek/workspace/jsz/ContactsApp/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "/Users/jacek/workspace/jsz/ContactsApp/app/src/main/res/mipmap-mdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/jacek/workspace/jsz/ContactsApp/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "/Users/jacek/workspace/jsz/ContactsApp/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/jacek/workspace/jsz/ContactsApp/app/build/intermediates/res/merged/debug/layout_user_details_fragment.xml.flat",
+        "source": "/Users/jacek/workspace/jsz/ContactsApp/app/src/main/res/layout/user_details_fragment.xml"
+    },
+    {
+        "merged": "/Users/jacek/workspace/jsz/ContactsApp/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "/Users/jacek/workspace/jsz/ContactsApp/app/src/main/res/mipmap-hdpi/ic_launcher.png"
+    }
+]
