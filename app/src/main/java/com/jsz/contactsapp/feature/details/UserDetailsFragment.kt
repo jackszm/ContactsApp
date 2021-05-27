@@ -37,10 +37,10 @@ class UserDetailsFragment : BottomSheetFragment(R.layout.user_details_fragment) 
                     binding.txtUserFullName.text = it.fullName
                 }
                 UserDetailsViewModel.State.Loading -> {
-                    doNothing() // TODO: Show loading spinner
+                    doNothing() // TODO: Show loading spinner | Reading from db is fast, do we really need it ?
                 }
                 UserDetailsViewModel.State.Error -> {
-                    doNothing() // TODO: Show error
+                    doNothing() // TODO: Show error | It is very unlikely that item is not in the db
                 }
             }.exhaustive
         }
