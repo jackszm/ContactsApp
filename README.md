@@ -16,7 +16,7 @@ The app composits of two screens:
 - [Koin](https://insert-koin.io/) is used as ~~Dependeny Injection~~ Service Locator.
 - View Models and Repository are 100% covered with unit tests.
 
-- The Details screen does not need to be separate Activity, but I wanted to play a bit with a navigation through the apps. 
+- The Details screen does not need to be separate Activity, but I wanted to play a bit with generic navigation approach.
 - There is bunch of small effort but also small value TODOs in the Details Screen.
 - The app is not finished, there is lots of potential next steps all depending on the direction of the product.
 
