@@ -20,6 +20,8 @@ The app composits of two screens:
 - There is bunch of small effort but also small value TODOs in the Details Screen
 - The app is not finished, there is lots of potential next steps all depending on the direction of the product.
 
+## Screenshots 
+
 Main screen | Details screen 
 --- | --- 
 ![](docs/img/main_screen.png) | ![](docs/img/details_screen.png) | 
