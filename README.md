@@ -13,9 +13,11 @@ The app composits of two screens:
 - UI State is persisted across confuguration changes with Android `ViewModel`.
 - UI State is propagated from `ViewModel` to Ui with `LiveData`.
 - Api data is propagated to the `ViewModel` woith `RxJava`.
+- The data is cached with Room so it also works in airplane mode.
 - [Koin](https://insert-koin.io/) is used as ~~Dependeny Injection~~ Service Locator.
 - View Models and Repository are 100% covered with unit tests.
 
+Notes: 
 - The Details screen does not need to be separate Activity, but I wanted to play a bit with generic navigation approach.
 - There is bunch of small effort but also small value TODOs in the Details Screen.
 - The app is not finished, there is lots of potential next steps all depending on the direction of the product.
