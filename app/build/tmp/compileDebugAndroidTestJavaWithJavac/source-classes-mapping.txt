@@ -1,2 +1,0 @@
-com/jsz/contactsapp/test/BuildConfig.java
- com.jsz.contactsapp.test.BuildConfig
