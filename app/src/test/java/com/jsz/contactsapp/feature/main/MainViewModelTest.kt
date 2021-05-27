@@ -88,6 +88,16 @@ class MainViewModelTest {
     }
 
     @Test
+    fun `hides loading spinner when fetching user fails but data is cached`() {
+        getUsersSubject.onNext(USERS)
+        testObserver.clearObservedStates()
+
+        fetchUsersSubject.onError(Throwable())
+
+        testObserver.assertStatesObserved(State.Data(refreshing = false, items = UI_USERS))
+    }
+
+    @Test
     fun `emits error state when fetching users fails`() {
         getUsersSubject.onError(Throwable())
 
@@ -121,17 +131,52 @@ private val NEW_USERS = listOf(
 
 private val UI_USERS = listOf(
     UsersListItemUiModel.LetterHeader("S"),
-    UserItemUiModel(User("user-id-123", "Spider Man", "spider.man@gmail.com", "www.image.com/1.jpg"), anyAction),
+    UserItemUiModel(
+        User(
+            "user-id-123",
+            "Spider Man",
+            "spider.man@gmail.com",
+            "www.image.com/1.jpg"
+        ), anyAction
+    ),
     UsersListItemUiModel.LetterHeader("W"),
-    UserItemUiModel(User("user-id-222", "Wonder Woman", "wonder.woman@gmail.com", "www.image.com/2.jpg"), anyAction),
+    UserItemUiModel(
+        User(
+            "user-id-222",
+            "Wonder Woman",
+            "wonder.woman@gmail.com",
+            "www.image.com/2.jpg"
+        ), anyAction
+    ),
 )
 
 
 private val NEW_UI_USERS = listOf(
     UsersListItemUiModel.LetterHeader("I"),
-    UserItemUiModel(User("user-id-000", "Ironman", "ironman@gmail.com", "www.image.com/ironman.jpg"), anyAction),
+    UserItemUiModel(
+        User(
+            "user-id-000",
+            "Ironman",
+            "ironman@gmail.com",
+            "www.image.com/ironman.jpg"
+        ), anyAction
+    ),
     UsersListItemUiModel.LetterHeader("S"),
-    UserItemUiModel(User("user-id-123", "Spider Man", "spider.man@gmail.com", "www.image.com/1.jpg"), anyAction),
+    UserItemUiModel(
+        User(
+            "user-id-123",
+            "Spider Man",
+            "spider.man@gmail.com",
+            "www.image.com/1.jpg"
+        ), anyAction
+    ),
     UsersListItemUiModel.LetterHeader("W"),
-    UserItemUiModel(User("user-id-222", "Wonder Woman", "wonder.woman@gmail.com", "www.image.com/2.jpg"), anyAction),
+    UserItemUiModel(
+        User(
+            "user-id-222",
+            "Wonder Woman",
+            "wonder.woman@gmail.com",
+            "www.image.com/2.jpg"
+        ), anyAction
+    ),
 )

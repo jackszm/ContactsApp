@@ -1,6 +1,8 @@
 package com.jsz.contactsapp.feature.main
 
 import android.util.Log
+import com.jsz.contactsapp.common.ext.doNothing
+import com.jsz.contactsapp.common.ext.exhaustive
 import com.jsz.contactsapp.common.utils.Action
 import com.jsz.contactsapp.common.utils.BaseViewModel
 import com.jsz.contactsapp.common.utils.HasId
@@ -11,7 +13,6 @@ import com.jsz.contactsapp.feature.main.MainViewModel.State
 import com.jsz.contactsapp.feature.main.UsersListItemUiModel.LetterHeader
 import com.jsz.contactsapp.feature.main.UsersListItemUiModel.UserItemUiModel
 import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.rxkotlin.Observables
 import io.reactivex.rxkotlin.plusAssign
 import io.reactivex.rxkotlin.subscribeBy
 import io.reactivex.schedulers.Schedulers
@@ -21,17 +22,43 @@ class MainViewModel(
 ) : BaseViewModel<State, NavigationEvent>(State.Loading) {
 
     init {
-        disposables += Observables.combineLatest(
-            getUsersWithHeaders(),
-            refreshUsers()
-        ) { items, refreshing -> toUiModel(items, refreshing) }
+        disposables += getUsersWithHeaders()
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribeBy(
-                onNext = { setState { it } },
+                onNext = {
+                    when (val currentState = state.requireValue()) {
+                        is State.Data -> setState { currentState.copy(items = it) }
+                        State.Error -> setState { State.Data(items = it, refreshing = false) }
+                        State.Loading -> setState { State.Data(items = it, refreshing = true) }
+                    }.exhaustive
+                },
                 onError = {
                     Log.e("!!!", it.stackTraceToString())
                     setState { State.Error }
+                }
+            )
+
+        disposables += refreshUsers()
+            .subscribeOn(Schedulers.io())
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribeBy(
+                onNext = { refreshing ->
+                    when (val currentState = state.requireValue()) {
+                        is State.Data -> setState { currentState.copy(refreshing = refreshing) }
+                        State.Error -> doNothing()
+                        State.Loading -> if (!refreshing) setState { State.Data(items = emptyList(), refreshing = false) } else doNothing()
+                    }.exhaustive
+                },
+                onError = {
+                    when (val currentState = state.requireValue()) {
+                        is State.Data -> {
+                            // TODO: Tell the user about stale data (show snack bar maybe?)
+                            setState { currentState.copy(refreshing = false) }
+                        }
+                        State.Error -> doNothing()
+                        State.Loading -> setState { State.Error }
+                    }.exhaustive
                 }
             )
     }
@@ -40,7 +67,6 @@ class MainViewModel(
         .map { users -> users.groupBy { it.fullName[0] } }
         .map { it.toUiModelLists() }
         .map { listItems -> listItems.sortedBy { (it[0] as LetterHeader).letterLabel }.flatten() }
-        .startWith(emptyList<UsersListItemUiModel>())
 
     private fun Map<Char, List<User>>.toUiModelLists() = entries.map {
         val header = LetterHeader(it.key.toString())
@@ -52,11 +78,6 @@ class MainViewModel(
         .toSingleDefault(false)
         .toObservable()
         .startWith(true)
-
-    private fun toUiModel(items: List<UsersListItemUiModel>, refreshing: Boolean) = when {
-        items.isEmpty() && refreshing -> State.Loading
-        else -> State.Data(refreshing, items)
-    }
 
     private fun onUserClicked(user: User) {
         sendNavigationEvent(NavigationEvent.OnUserClicked(user.userId))

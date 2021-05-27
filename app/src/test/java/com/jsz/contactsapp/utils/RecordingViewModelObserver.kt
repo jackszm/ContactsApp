@@ -3,7 +3,9 @@
 package com.jsz.contactsapp.utils
 
 import com.jsz.contactsapp.common.utils.BaseViewModel
-import org.assertj.core.api.Assertions.assertThat
+import org.amshove.kluent.shouldBeEmpty
+import org.amshove.kluent.shouldBeEqualTo
+import org.amshove.kluent.shouldContainSame
 
 
 class RecordingViewModelObserver<State : Any, NavigationEvents : Any> {
@@ -29,15 +31,22 @@ class RecordingViewModelObserver<State : Any, NavigationEvents : Any> {
     /** Asserts that the passed list of states has been observed since the last call to this method. */
     @Synchronized
     fun assertStatesObserved(vararg states: State) {
-        assertThat(observedStates).containsExactly(*states)
+        observedStates shouldContainSame states.toList()
         observedStates.clear()
     }
 
     /** Asserts that the state was the last state observed. */
     @Synchronized
     fun assertMostRecentStateObserved(state: State) {
-        assertThat(peekMostRecentObservedState()).isEqualTo(state)
+        peekMostRecentObservedState() shouldBeEqualTo state
         observedStates.clear()
+    }
+
+
+    /** Asserts that no state was observed. */
+    @Synchronized
+    fun assertNoStateObserved() {
+        observedStates.shouldBeEmpty()
     }
 
     @Synchronized
